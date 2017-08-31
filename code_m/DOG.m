@@ -87,11 +87,11 @@ for i=1:levels
     tmp = size(Gaussian_p{i,1});
     for j=1:(floors+3)
         pic(y:(y+tmp(1)-1), x:(x+tmp(2)-1)) = Gaussian_p{i, j};
-        x = x+tmp(2);
+        x = x + tmp(2);
     end
-    y = y+ tmp(1);
+    y = y + tmp(1);
 end
-figure;
+figure('Name', 'Gaussian_p');
 imshow(pic);
 
 tmp = zeros(1,2);
@@ -110,5 +110,5 @@ for i = 1:levels
     end
     y = y + tmp(1);
 end
-figure;
+figure('Name', 'DOG_p');
 imshow(pic);
